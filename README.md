@@ -1,25 +1,14 @@
 # svgforme
 This application is to use node.js in the command-line to take in user input such as color, shape, and text for the logo to generate a SVG to a .svg file.
 
+## link to video
 
-## Delete when complete
-hashtag notes for me
-<svg version="1.1"
-     width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
 
-  <rect width="100%" height="100%" fill="red" />
+## setup and usage instructions
 
-  <circle cx="150" cy="100" r="80" fill="green" />
 
-  <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
 
-</svg>
 
-This is what we want to render into the logo.svg file we create. 
-It will need to fill this out based on the answers for color, shape, and text. 
-
-so maybe it will look like a few if() statements.
 
 if(data.shape === cirlce) return `<circle cx="150" cy="100" r="80" />`
 else(data.shape === square) return `<rect width="100" height="100" fill="red" />`
