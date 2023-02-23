@@ -2,14 +2,8 @@ const inquirer = require("inquirer");
 const fs = require('fs');
 const SVG = require("./lib/svg")
 const {Circle,Square,Triangle} = require("./lib/shapes") 
-function generateSvg(data) {
-    return `# ${data.shape}
-    
-    ${data.color}
-    
-    ${<text x="150" y="125" font-size="60" text-anchor="middle" fill="white">${data.text}</text>}`
-    // how write this?
-}
+
+
 const questions = [
     {
         type: "list",
