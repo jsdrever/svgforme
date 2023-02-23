@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require('fs');
 const SVG = require("./lib/svg")
 const {Circle,Square,Triangle} = require("./lib/shapes") 
-
+// these import from my other files and the components to write files and run tests
 
 const questions = [
     {
@@ -22,14 +22,14 @@ const questions = [
         name: "text",
         message: "What three or fewer letters would you like to display on the svg?"
     },
-  
+  // Selects the options for the svg
 ]
-
+// This writes the file and puts the data on the file
 function writeToFile(fileName, data) { 
     fs.writeFileSync(fileName, data, (err) =>
       err ? console.error(err) : console.log('Success!')) 
 }
-
+// this function calls the questions/answers from inquirer
 function init() {
     inquirer.prompt(questions)
     .then((answers) => {
@@ -40,6 +40,7 @@ function init() {
             case "Circle":  
                 shapeCreated = new Circle()
                 break;
+                //! how do i add the call for square and triangle?
         
         }
         shapeCreated.setColor(answers.color)
@@ -47,6 +48,7 @@ function init() {
         svgArt.setShape(shapeCreated)
         svgArt.setText(answers.text)
         writeToFile('logo.svg',svgArt.render())
+        // this applies all the answers and renders the text to the newly written file logo.svg
     })
 }
 
