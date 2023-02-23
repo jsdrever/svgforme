@@ -40,7 +40,7 @@ function init() {
             case "Circle":  
                 shapeCreated = new Circle()
                 break;
-                //! how do i add the call for square and triangle?
+                //! how do i add the call to read square and triangle?
         
         }
         shapeCreated.setColor(answers.color)
