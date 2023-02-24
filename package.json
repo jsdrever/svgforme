@@ -7,6 +7,7 @@
     "example": "examples",
     "lib": "lib"
   },
+  
   "scripts": {
     "test": "jest"
   },

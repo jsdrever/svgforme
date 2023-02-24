@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+// import inquirer from 'inquirer';
 const fs = require('fs');
 const SVG = require("./lib/svg")
 const {Circle,Square,Triangle} = require("./lib/shapes") 
