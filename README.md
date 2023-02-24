@@ -5,7 +5,7 @@ This application is to use node.js in the command-line to take in user input suc
 
 
 ## setup and usage instructions
-
+the user will recieve three prompts to choose from. They will select options from a list for shape and color, then they must input three or less characters to render their new logo.
 
 ## Link to Github
 https://github.com/jsdrever/svgforme.git

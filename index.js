@@ -34,23 +34,44 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then((answers) => {
-        console.log(answers);
-        console.log(`The shape you chose is ${answers.shape}, the color you chose is ${answers.color}, and the text you're adding is ${answers.text}`);
+        // .then(({ text, textColor, shapeType, shapeColor }) => {
+        // console.log(answers);
+        // console.log(`The shape you chose is ${answers.shape}, the color you chose is ${answers.color}, and the text you're adding is ${answers.text}`);
+        
         let shapeCreated
         switch (answers.shape){
-            case "Circle":  
+            case "circle":  
                 shapeCreated = new Circle()
                 break;
+            case "square":  
+                shapeCreated = new Square()
+                break;
+            case "triangle":  
+                shapeCreated = new Triangle()
+                break;
+                 
+
                 //! how do i add the call to read square and triangle?
         
         }
         shapeCreated.setColor(answers.color)
+        console.log(shapeCreated, 'here');
         const svgArt = new SVG()
         svgArt.setShape(shapeCreated)
         svgArt.setText(answers.text)
-        writeToFile('logo.svg',svgArt.render())
+        console.log(svgArt);
+        
+        return writeToFile('logo.svg',svgArt.render())
+        
         // this applies all the answers and renders the text to the newly written file logo.svg
     })
+    .then(() => {
+        console.log('we done it yo!');
+    }) 
+    .catch((error) => {
+        console.log(error);
+        console.log("wrong dummy");
+    });
 }
 
 init();
