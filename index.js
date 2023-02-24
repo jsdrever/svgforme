@@ -35,7 +35,6 @@ function init() {
     inquirer.prompt(questions)
     .then((answers) => {
         // .then(({ text, textColor, shapeType, shapeColor }) => {
-        // console.log(answers);
         // console.log(`The shape you chose is ${answers.shape}, the color you chose is ${answers.color}, and the text you're adding is ${answers.text}`);
         
         let shapeCreated
@@ -50,8 +49,6 @@ function init() {
                 shapeCreated = new Triangle()
                 break;
                  
-
-                //! how do i add the call to read square and triangle?
         
         }
         shapeCreated.setColor(answers.color)
